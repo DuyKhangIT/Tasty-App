@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro_Login.Login"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imgLogoLogin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:transitionName="logo_img"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/logoapp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Login_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="ĐĂNG NHẬP"
+        android:textColor="#ffbd59"
+        android:textSize="40sp"
+        android:transitionName="logo_tv" />
+
+    <TextView
+        android:id="@+id/slogan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập để tiếp tục"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtUsername"
+            android:hint="Tài Khoản"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ediPassword"
+            android:hint="Mật Khẩu"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnQuenMatKhau"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="QUÊN MẬT KHẨU"
+            android:background="#00000000"
+            android:layout_gravity="right"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/btnLoginWithPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/green"
+            android:text="Đăng nhập bằng số điện thoại"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#ffbd59"
+            android:text="ĐĂNG NHẬP"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/txtCreateAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TẠO TÀI KHOẢN MỚI"
+            android:background="#00000000"
+            android:layout_gravity="right"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

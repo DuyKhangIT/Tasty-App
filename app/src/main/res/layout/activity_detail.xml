@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/purple_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar_fake"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imgBackDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Duy Khang"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/avtUser"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.116"
+                tools:ignore="MissingConstraints"></TextView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avtUser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/u1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgBackDetail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                tools:ignore="MissingClass,MissingConstraints">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="22/10/2021 lúc 14:13"
+                android:textColor="#4C4948"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtUserName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/app_bar_image_vpg2"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_grade_24"
+                    tools:ignore="MissingConstraints">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="9.670"
+                    android:textColor="#F44336"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_remove_red_eye_24"
+                    tools:ignore="MissingConstraints"></ImageView>
+
+                <TextView
+
+                    android:id="@+id/txtRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="5/5 điểm"
+                    android:textColor="#070707"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtTitleDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/acme"
+                    android:padding="5dp"
+                    android:text="ĂN VẶT ĐỈNK KOUT VỚI CHẢO GÀ CAY PHÔ MAI KÉO SỢI BEO BÉO"
+                    android:textColor="#020202"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                    tools:ignore="MissingConstraints">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtContentDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="10dp"
+                    android:text="Ăn vặt ngon rẻ mà hổng kể đến Ăn vặt Em Guột ở Ngô Nhân Tịnh quận 5 thì thiệt là thiếu xót. Ở đây là thiên đường ăn vặt luôn á mấy ông, từ bánh tráng mì trộn cho đến gà viên gà sốt, kimbap thì đủ loại luônnnnn
+
+Mà tự nhiên thèm cái cảm giác được ngồi ở quán á. Cái làm liền chảo gà cay kimbap phô mai. Ta nói gà thấm đẫm sốt kéo sợi phô mai dài ơi dài siêu bắttttt
+
+Hổng sao. Tại bên đây có bán mang về á. Tui order thử thấy y chang như ăn ở quán. Vừa ngon vừa tiện lại vẫn còn ấm nóng. Điểm cộng nèe. Order về nhà ăn nhennn
+"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtAddressDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="- 📌 Em Guột: 128A Ngô Nhân Tịnh P13 Q5
+                   - ⏱ 12:00 - 21:45
+                   - 💥 Order qua ShopeeFood, Beamin: Em Guột Ăn Vặt"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtContentDetail"
+                    tools:ignore="MissingConstraints">
+
+                </TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/txtDiaDiem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Xem địa điểm"
+                    android:textColor="@color/black"
+                    android:textSize="20sp">
+                </Button>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Bình luận"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/txtNoCmt"
+                    android:layout_width="400dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="6dp"
+                    android:background="#EDE7E7"
+                    android:gravity="center"
+                    android:text="Hãy là người đầu tiên bình luận bài viết này"
+                    android:textColor="#40241F"
+                    android:textSize="18sp"></TextView>
+
+                <ListView
+
+                    android:id="@+id/lvCmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <EditText
+                    android:id="@+id/edtCmt"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/search_edit"
+                    android:hint="Viết bình luận..."
+                    android:paddingStart="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck"></EditText>
+
+                <ImageView
+                    android:id="@+id/btnCmt"
+                    android:layout_width="41dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_baseline_send_24">
+
+                </ImageView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

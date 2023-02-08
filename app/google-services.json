@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "765168819841",
+    "project_id": "reviewfoodapp",
+    "storage_bucket": "reviewfoodapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765168819841:android:aba6eb689d53cca5853780",
+        "android_client_info": {
+          "package_name": "com.example.doanandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765168819841-hnhqs2smid67rlkers2u0pqur1rfrae2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh8plxVgptQiCLMSmzTRd_tqEXpSp_ImU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765168819841-hnhqs2smid67rlkers2u0pqur1rfrae2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

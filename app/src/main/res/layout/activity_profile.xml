@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="710dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FFBD59"
+                android:padding="20dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_account_circle_24" />
+
+                <ImageView
+                    android:id="@+id/Logout_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="350dp"
+                    android:src="@drawable/ic_baseline_logout_24" />
+                <TextView
+                    android:id="@+id/HoTen_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_profile"
+                    android:fontFamily="sans-serif"
+                    android:includeFontPadding="false"
+
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/TenDangNhap_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/HoTen_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_profile"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvHoVaTen_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Họ và Tên">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                        android:drawablePadding="10dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvEmail_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="10dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvSoDienThoai_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Số Điện Thoại">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/ic_baseline_smartphone_24"
+                        android:drawablePadding="10dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvPassword_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Mật Khẩu">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="10dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCapNhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFEDA0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="Cập Nhật"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FFBD59" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_profile"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/top"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="45sp"
+        android:layout_marginBottom="3dp"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_nav">
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

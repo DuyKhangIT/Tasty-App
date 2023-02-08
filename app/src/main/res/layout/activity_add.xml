@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/purple_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar_fake"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imgBackDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+            </ImageView>
+
+            <Button
+                android:id="@+id/btnPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/post"
+                android:text="Đăng bài"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btnAddImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/addimg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/edtTittle"
+                    android:layout_width="360dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="4dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Cho Review của bạn một tiêu đề"
+                    android:inputType="textMultiLine|text"
+                    android:lines="10"
+                    android:maxLines="10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgShow"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/edtContent"
+                    android:layout_width="360dp"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="4dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Nội dung bạn muốn Review"
+                    android:inputType="textMultiLine"
+                    android:maxLines="100"
+                    android:scrollbars="vertical"
+
+                    android:scrollHorizontally="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtTittle"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Địa chỉ"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtContent" />
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="360dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:hint="Nhập địa chỉ"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+                <TextView
+                    android:id="@+id/txtChonBuoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Chọn Buổi"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtAddress" />
+                <LinearLayout
+                    android:id="@+id/listCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtChonBuoi">
+                    <CheckBox
+                        android:id="@+id/check_sang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="12dp"
+                        android:checked="false"
+                        android:text="Buổi sáng" />
+                    <CheckBox
+                        android:id="@+id/check_chieu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="12dp"
+                        android:checked="false"
+                        android:text="Buổi chiều" />
+                    <CheckBox
+                        android:id="@+id/check_toi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="12dp"
+                        android:checked="false"
+                        android:text="Buổi tối" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txtRateDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Đánh giá"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listCheck" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+
+                    app:srcCompat="@drawable/baseline_grade_24_black" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24_black" />
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="88dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24_black" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24_black" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="168dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24_black" />
+
+                <ImageView
+                    android:id="@+id/rate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24" />
+                <ImageView
+                    android:id="@+id/rate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24" />
+                <ImageView
+                    android:id="@+id/rate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="88dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24" />
+                <ImageView
+                    android:id="@+id/rate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24" />
+                <ImageView
+                    android:id="@+id/rate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="168dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtRateDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRateDetail"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/baseline_grade_24" />
+
+                <TextView
+                    android:id="@+id/txtErrPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#DD0000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgShow"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.006"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAddImg"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
